@@ -7,7 +7,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 # Función para revisar el código
 def revisar_codigo(codigo):
     respuesta = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="text-davinci-002",
         messages=[
             {"role": "system", "content": "Eres un asistente útil que revisa código."},
             {"role": "user", "content": f"Revisa el siguiente código:\n\n{codigo}"}
